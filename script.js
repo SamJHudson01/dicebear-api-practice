@@ -37,4 +37,7 @@ async function getNewAvatar() {
 
 }
 
+generateNewAvatarBtn.addEventListener("click", getNewAvatar);
+
+
 getNewAvatar();

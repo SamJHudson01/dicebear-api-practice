@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dicebear API Practive</title>
+    <title>Dicebear API Practice</title>
    
     
     <!-- Old Favicon - Grab Icon From Google (Might be unsupported in the future) -->
@@ -17,7 +17,16 @@
     <div class="avatar-container" id="avatar-container">
         <div class="avatar-image" id="avatar-image"></div>
         <div class="avatar" id="avatar"></div>
-        <button class="generate-new" id="generate-new" title="Generate New Avatar">Generate New Avatar</button>        
+        <div class="generate-new-container" id="generate-new-container">
+            <label for ="male-or-female" class="radio">
+                <input type="radio" name="sexSelector" id="male-radio" class="radio-input" checked="checked">
+                Male
+                <input type="radio" name="sexSelector" id="female-radio" class="radio-input">
+                Female
+            </label>
+            <button class="generate-new" id="generate-new" title="Generate New Avatar">Generate New Avatar</button>
+        </div>
+                
     </div>
 
     <!-- Script -->

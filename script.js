@@ -12,13 +12,24 @@ async function getNewAvatar() {
     let avatarName = "initialAvatar";
     if (!initialLoad) {
         avatarName = prompt("Please enter your avatar's name");
+        console.log(avatarName);
     }
-    const apiUrl = "https://avatars.dicebear.com/api/male/testseed.svg";
+    let apiUrl = "https://avatars.dicebear.com/api/male/" + avatarName + ".svg";
+
+    if (maleRadio.checked){
+        apiUrl = "https://avatars.dicebear.com/api/male/" + avatarName + ".svg";
+    } else {
+        apiUrl = "https://avatars.dicebear.com/api/female/" + avatarName + ".svg";
+    }
+    console.log(apiUrl);
     try {
-        const newAvatar = await fetch(apiUrl);
+        avatarImage.innerHTML = "";
+        let newAvatar = await fetch(apiUrl);
         img = document.createElement('img');
         img.src = newAvatar.url;
         avatarImage.appendChild(img);
+        console.log(avatarImage);
+        
     } catch (error) {
         //catch error here
     }
